@@ -1,0 +1,41 @@
+<div style="width:100%;height:100%;">
+    <table class="settings-section">
+      <tbody>
+      	<tr>
+          <td>${nls.selectedLayer}</td>
+          <td>
+            <div id="option"> 
+            </div>
+          </td>
+      	</tr>
+        <tr>
+          <td>${nls.clusterSize}</td>
+          <td>
+            <input type="text" data-dojo-type="dijit/form/NumberSpinner" value="120" data-dojo-attach-point="spinnerCluster" data-dojo-props="constraints: {min:1}">
+          </td>
+        </tr>
+        <tr>
+          <td>${nls.clusterColor}</td>
+          <td>
+            <div data-dojo-attach-point="colorPickerCluster" data-dojo-type="jimu/dijit/ColorPicker" data-dojo-props='color:"${nls.selectedColor}"' style="display:inline-block;width:25px;height:25px;"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>${nls.clusterLabelColor}</td>
+          <td>
+            <div data-dojo-attach-point="colorPickerClusterLabel" data-dojo-type="jimu/dijit/ColorPicker" data-dojo-props='color:"${nls.selectedLabelColor}"' style="display:inline-block;width:25px;height:25px;"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <svg overflow="hidden" width="150" height="150" id="cluster_symbol_test" style="overflow: visible; position: absolute;">
+              <g transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,0.00000000)" style="display: block;">
+                <circle id="cluster_circle_colorcheck" fill="rgb(255, 69, 0)" fill-opacity="0.75" stroke="rgb(255, 69, 0)" stroke-opacity="0.35" stroke-width="15" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" cx="80" cy="80" r="55" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,0.00000000)" fill-rule="evenodd" stroke-dasharray="none" dojoGfxStrokeStyle="solid"></circle>
+                <text id="cluster_text_colorcheck" fill="rgb(255, 255, 255)" fill-opacity="1" stroke="none" stroke-opacity="0" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" x="82" y="79" text-anchor="middle" text-decoration="undefined" rotate="0" kerning="auto" text-rendering="auto" font-style="normal" font-variant="normal" font-weight="normal" font-size="13.333333333333332" font-family="Arial" dominant-baseline="alphabetic" transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,0.00000000,5.00000000)" fill-rule="evenodd">1445</text>
+              </g>
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

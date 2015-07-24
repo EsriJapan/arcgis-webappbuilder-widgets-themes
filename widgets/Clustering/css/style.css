@@ -1,0 +1,26 @@
+#clustering-button {
+	position: absolute;
+	z-index: 99;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	width: 30px;
+	height: 30px;
+	font-size: 24px;
+	font-family: verdana,helvetica;
+	line-height: 25px;
+	-webkit-user-select: none;
+	-webkit-box-sizing: border-box;
+	display: block;
+	text-align: center;
+	background-color: rgba(0,0,0,0.2);
+}
+#clustering-button:hover {
+	background-color: rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+#cl-image {
+	position: relative;
+	top: 3px;
+	height: 19px;
+	width: 19px;
+}
