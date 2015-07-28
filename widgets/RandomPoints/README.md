@@ -4,7 +4,7 @@
 
 ボタンをクリックすると地図上の任意の地点にポイント グラフィックが生成されます。
 
-![RandomPoints](images/randompoints.png)
+![RandomPoints](images/randompoints.gif)
 
 ## 実装例
 
