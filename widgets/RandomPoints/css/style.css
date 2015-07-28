@@ -1,0 +1,72 @@
+.jimu-widget-panel .jimu-foldable-dijit .jimu-foldable-panel {
+  position:relative;
+  width:360px;
+  height:150px;
+  min-width:150px;
+  min-height:150px;
+}
+
+.jimu-widget-randompoints {
+  position:relative;
+  width:100%;
+  height:20%;
+  min-width:150px;
+  min-height:150px;
+}
+
+.jimu-widget-randompoints:hover {
+}
+
+#randompoints_btn {
+
+}
+
+path[data-uniquevalue="random"] {
+  fill: none;
+  stroke: #f67682;
+  stroke-width: 1;
+  stroke-opacity: 0.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-name: pulse2;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-name: pulse2;
+}
+@-webkit-keyframes pulse2 {
+	0% {
+	  opacity: 0.55;
+	  stroke-width: 25;
+	  stroke: #f12e41;
+	}
+	45% {
+	  opacity: 0.7;
+	  stroke-width: 15;
+	  stroke: #f34656;
+	}
+	100% {
+	  opacity: 0.8;
+	  stroke-width: 2;
+	  stroke: #f45e6c;
+	}
+	}
+	@-moz-keyframes pulse2 {
+	0% {
+	  opacity: 0.55;
+	  stroke-width: 25;
+	  stroke: #f12e41;
+	}
+	45% {
+	  opacity: 0.7;
+	  stroke-width: 15;
+	  stroke: #f34656;
+	}
+	100% {
+	  opacity: 0.85;
+	  stroke-width: 2;
+	  stroke: #f45e6c;
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "configText":"カスタムだよ！",
+    "mapbasemap": "satellite",
+    "mapcenter": [136, 35],
+    "mapzoom": 12,
+    "mapslider": false
+}
