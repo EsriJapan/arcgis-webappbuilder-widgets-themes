@@ -27,8 +27,8 @@ ArcGIS for Developers の開発者であれば、このリポジトリを介し�
 * [API リファレンス](https://developers.arcgis.com/web-appbuilder/api-reference/widgetmanager.htm)
 
 以下のコミュニティでは世界のユーザーが作成したウィジェットとテーマが共有されています。
-* [GeoNet|Web AppBuilder Custom Widgets グループ](https://geonet.esri.com/groups/web-app-builder-custom-widgets)
-* [GitHub|solutions-webappbuilder-widgets](https://github.com/Esri/solutions-webappbuilder-widgets)
+* [GeoNet | Web AppBuilder Custom Widgets グループ](https://geonet.esri.com/groups/web-app-builder-custom-widgets)
+* [GitHub | solutions-webappbuilder-widgets](https://github.com/Esri/solutions-webappbuilder-widgets)
 
 ## ライセンス
 Copyright 2015 Esri Japan Corporation.
