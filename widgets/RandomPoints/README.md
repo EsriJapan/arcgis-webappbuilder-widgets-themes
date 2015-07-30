@@ -8,7 +8,9 @@
 
 ## 実装例
 
-Web AppBuilder 上のマップと連動するウィジェットを開発する際に最低限必要となる実装例です。
+Web AppBuilder のウィジェットを開発する際の実装例です。
+
+ウィジェット開発に関するより詳細な情報は [Web AppBuilder for ArcGIS (Developer Edition) カスタム ウィジェット開発ガイド](http://www.esrij.com/products/web-appbuilder-for-arcgis-dev/documents/)をご参照ください。
 
 **マップの参照:**
 
@@ -26,7 +28,7 @@ this.map
 this.map.addLayer(this.layer);
 ```
 
-**UI テンプレート上にウィジェットを作成:**
+**UI テンプレート上に Dojo ウィジェット（ボタン）を作成:**
 
 <p style="font-size: 9pt;">Widget.js</p>
 

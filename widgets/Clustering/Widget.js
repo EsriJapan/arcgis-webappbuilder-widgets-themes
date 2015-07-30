@@ -122,18 +122,19 @@ define([
             new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, lineColor, 15),
             markerColor);
 
+          // レンダラー（ポイント数に応じて数値分類）
           var renderer = new ClassBreaksRenderer(symbol, 'clusterCount');
 
-          small = new SimpleMarkerSymbol('circle', 25,
+          var small = new SimpleMarkerSymbol('circle', 25,
                       new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, lineColor, 15),
                       markerColor);
-          medium = new SimpleMarkerSymbol('circle', 50,
+          var medium = new SimpleMarkerSymbol('circle', 50,
                       new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, lineColor, 15),
                       markerColor);
-          large = new SimpleMarkerSymbol('circle', 80,
+          var large = new SimpleMarkerSymbol('circle', 80,
                       new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, lineColor, 15),
                       markerColor);
-          xlarge = new SimpleMarkerSymbol('circle', 110,
+          var xlarge = new SimpleMarkerSymbol('circle', 110,
                       new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, lineColor, 15),
                       markerColor);
 
