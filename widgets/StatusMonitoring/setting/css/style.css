@@ -1,0 +1,9 @@
+.jimu-widget-statusmonitoring-setting{
+  margin:0;
+  padding:0;
+  font-size:15px;
+}
+.jimu-widget-statusmonitoring-setting .dijitSelect{
+  height: 30px;
+  width: 100%;
+}
