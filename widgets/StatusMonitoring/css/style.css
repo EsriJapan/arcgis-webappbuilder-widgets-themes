@@ -1,0 +1,85 @@
+.jimu-widget-statusmonitoring .select-tracking-container {
+	width: 50%;
+  margin-top: 5px;
+}
+.jimu-widget-statusmonitoring .status-newsfeed-table .statusmonitoring-name-div{
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 100%;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.jimu-widget-statusmonitoring .status-newsfeed-table .statusmonitoring-content-div{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.jimu-widget-statusmonitoring .status-newsfeed-table tr {
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-name: fade;
+	-moz-animation-duration: 2s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-name: fade;
+}
+@-webkit-keyframes fade {
+  0% {
+  	background-color: white;
+    opacity: 0;
+  }
+  65% {
+  	background-color: white;
+    opacity: 0;
+  }
+  100% {
+  	background-color: none;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+  	background-color: white;
+    opacity: 0;
+  }
+  65% {
+  	background-color: white;
+    opacity: 0;
+  }
+  100% {
+  	background-color: none;
+    opacity: 1;
+  }
+}
+
+#target_highlight_layer {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: pulse;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: pulse;
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  45% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
