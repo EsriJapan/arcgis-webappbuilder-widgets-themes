@@ -4,7 +4,8 @@
         <tr>
           <td>${nls.targetLayer}</td>
           <td>
-            <div data-dojo-attach-point="targetLayerOption"> 
+            <div data-dojo-attach-point="targetLayerOption">
+              <select style="margin-left: 10px;" data-dojo-attach-point="targetLayerSelect" data-dojo-type="dijit/form/Select"></select>
             </div>
           </td>
         </tr>
@@ -23,11 +24,10 @@
           </td>
         </tr>
         <tr>
-          <td>${nls.targetIdentifiedField}</td>
+          <td>${nls.viewMessage}</td>
           <td>
             <div>
               <input type="checkbox" checked="true" data-dojo-attach-point="cbxViewMessage" data-dojo-attach-event="onclick: _onCbxViewMessageClicked" />
-              <label data-dojo-attach-point="useClosestFacilityLabel">${nls.viewMessage}</label>
             </div>
           </td>
         </tr>

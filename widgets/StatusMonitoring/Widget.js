@@ -95,6 +95,10 @@ define([
         //this.targetLayer = targetLayer;        
         console.log(this.targetLayer);
 
+        if(this.targetLayer.geometryType !== "esriGeometryPoint") {
+          html.style(query(".select-tracking-container")[0], "display", "none");
+        }
+
         // 監視対象レイヤーのグラフィック描画イベント
         this.targetLayer.on("graphic-draw", lang.hitch(this, "_onGetTargetFeature"));
 

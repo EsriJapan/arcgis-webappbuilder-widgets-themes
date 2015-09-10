@@ -66,29 +66,39 @@ define([
 
         this.viewMessage = true;
 
-        if (!this.targetLayerSelect){
+        //if (!this.targetLayerSelect){
           // 選択レイヤー選択フォームの作成
           var layers = this.map.itemInfo.itemData.operationalLayers;
-          if(layers.length === 0) {
+          /*if(layers.length === 0) {
+            new Message({
+              message: this.nls.messageNoMap
+            });
+          }*/
+
+          //this.targetLayerSelect = new Select({name: "Layer"});
+          //this.targetLayerSelect.placeAt(this.targetLayerOption);
+          var targetLayerSelect = this.targetLayerSelect;
+          console.log("this.map.itemInfo.itemData.operationalLayers", layers);
+          var initOptions = [];
+          array.forEach(layers, function(layer) {
+            if(layer.layerType === "ArcGISFeatureLayer" || layer.layerObject.type === "Feature Layer") {
+              var option = { value: layer.id, label: layer.title };
+              initOptions.push(option);
+              //targetLayerSelect.addOption([option]);
+            }
+          });
+          targetLayerSelect.set("options", initOptions).reset();
+          //this.targetLayerSelect.startup();
+          on(this.targetLayerSelect, "Change", lang.hitch(this, "_onChangeTargetLayer"));
+
+          if(initOptions.length === 0) {
             new Message({
               message: this.nls.messageNoMap
             });
           }
 
-          this.targetLayerSelect = new Select({name: "Layer"});
-          this.targetLayerSelect.placeAt(this.targetLayerOption);
-          var targetLayerSelect = this.targetLayerSelect;
-          console.log("this.map.itemInfo.itemData.operationalLayers", layers);
-          array.forEach(layers, function(layer) {
-            if(layer.layerType === "ArcGISFeatureLayer") {
-              var option = { value: layer.id, label: layer.title };
-              targetLayerSelect.addOption([option]);
-            }
-          });
-          this.targetLayerSelect.startup();
-          on(this.targetLayerSelect, "Change", lang.hitch(this, "_onChangeTargetLayer"));
-
-          var targetLayer = this.map.getLayer(this.targetLayerSelect.value);
+          //var targetLayer = this.map.getLayer(this.targetLayerSelect.value);
+          var targetLayer = this.map.getLayer(initOptions[0].value);
           if(!this.targetFieldSelect) {
             this.targetFieldSelect = new Select({name: "Field"});
             this.targetFieldSelect.placeAt(this.targetFieldOption);
@@ -109,7 +119,7 @@ define([
             });
             this.targetIdentifiedFieldSelect.startup();
           }
-        }
+        //}
       },
 
       // 設定情報をWidget.jsに継承（this.config）
