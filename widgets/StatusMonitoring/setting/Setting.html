@@ -1,0 +1,36 @@
+<div style="width:100%;height:100%;">
+    <table class="settings-section">
+      <tbody>
+        <tr>
+          <td>${nls.targetLayer}</td>
+          <td>
+            <div data-dojo-attach-point="targetLayerOption">
+              <select style="margin-left: 10px;" data-dojo-attach-point="targetLayerSelect" data-dojo-type="dijit/form/Select"></select>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>${nls.targetField}</td>
+          <td>
+            <div data-dojo-attach-point="targetFieldOption"> 
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>${nls.targetIdentifiedField}</td>
+          <td>
+            <div data-dojo-attach-point="targetIdentifiedFieldOption"> 
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>${nls.viewMessage}</td>
+          <td>
+            <div>
+              <input type="checkbox" checked="true" data-dojo-attach-point="cbxViewMessage" data-dojo-attach-event="onclick: _onCbxViewMessageClicked" />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
