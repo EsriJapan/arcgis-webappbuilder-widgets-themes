@@ -14,7 +14,7 @@
 
 ## 動作環境
 
-* Web AppBuilder 1.1
+* Web AppBuilder 1.3
 
 ## ライセンス
 Copyright 2015 Esri Japan Corporation.

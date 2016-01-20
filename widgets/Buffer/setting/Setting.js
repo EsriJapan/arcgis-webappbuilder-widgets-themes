@@ -47,7 +47,7 @@ define([
         if (this.config.measurement.LengthUnit) {
           this.selectLengthUnit.set('value',  this.config.measurement.LengthUnit);
         } else {
-          this.selectLengthUnit.set('value', "esriKilometers");
+          this.selectLengthUnit.set('value', "kilometers");
           this.config.measurement.UnitLabel = "キロメートル"; 
         }
 
@@ -55,7 +55,7 @@ define([
 
       getConfig: function() {
         this.config.measurement.LengthUnit = this.selectLengthUnit.value;
-        if (this.config.measurement.LengthUnit == "esriKilometers") {
+        if (this.config.measurement.LengthUnit == "kilometers") {
         	this.config.measurement.UnitLabel = "キロメートル";
         } else {
             this.config.measurement.UnitLabel = "メートル";

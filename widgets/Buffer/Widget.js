@@ -1,8 +1,8 @@
 ﻿//>>built
 define(['dojo/_base/declare', 'jimu/BaseWidget',
-"esri/geometry/Circle", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "esri/graphic", "esri/tasks/query", "esri/symbols/SimpleMarkerSymbol", "dijit/form/Select"
+"esri/geometry/geometryEngine", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "esri/graphic", "esri/tasks/query", "esri/symbols/SimpleMarkerSymbol", "dijit/form/Select"
 ],
-function (declare, BaseWidget, Circle, SimpleFillSymbol, SimpleLineSymbol, Color, Graphic, Query, SimpleMarkerSymbol, Select
+function (declare, BaseWidget, geometryEngine, SimpleFillSymbol, SimpleLineSymbol, Color, Graphic, Query, SimpleMarkerSymbol, Select
 	) {
 var clazz = declare([BaseWidget], {baseClass: 'jimu-widget-Buffer',
 ckickfunction:null,
@@ -16,7 +16,7 @@ var json = this.config.measurement;
 //マップコンストラクタを取得
 var map = this.map;
 this.ckickfunction = this.map.on("click", clickHandler);
-//マップ上のレイヤを取得し、レイヤ一覧をselectlayerに表示
+//マップ上のレイヤーを取得し、レイヤー一覧をselectlayerに表示
 if (!this.layerlist){
 	this.layerlist = Select({name: "select"}, "selectlayer");
 	for(var j = 0; j < map.graphicsLayerIds.length; j++) {
@@ -27,7 +27,7 @@ if (!this.layerlist){
 	layerStr = this.layerlist.get("value");
 	this.layerlist.startup();
 }
-// selectlayerで選択レイヤを変更したとき
+// selectlayerで選択レイヤーを変更したとき
 this.layerlist.on("change", function(){
     layerStr = this.get("value");
 })
@@ -37,22 +37,21 @@ function clickHandler(evt){
 map.graphics.clear();
 //inputNodeの値を取得
 distance = distanceNode.value;
-//Circleジオメトリを作成
+//バッファー用のジオメトリを作成
 //半径の単位をconfig.jsonから取得
-var circleGeometry = new Circle(evt.mapPoint,{
-    "radius":distance, "numberOfPoints":60, "radiusUnit":json.LengthUnit
-});
-// バッファGraphicをGraphicsLayerに追加
+var bufferGeometry = geometryEngine.buffer(evt.mapPoint, distance, json.LengthUnit);
+//Graphicを作成しGraphicsLayerに追加
 var sfs = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, new SimpleLineSymbol(SimpleLineSymbol.STYLE_DASHDOT, new Color([255,0,0]), 2),new Color([255,255,0,0.25]));
-var graphic = new Graphic(circleGeometry, sfs);
+var graphic = new Graphic(bufferGeometry, sfs);
 map.graphics.add(graphic);
 
-//バッファ検索
+//バッファー検索
 var query = new Query();
 query.geometry = graphic.geometry;
-//マップ上からレイヤIDを指定してフィーチャレイヤを取得
+query.spatialRelationship = Query.SPATIAL_REL_CONTAINS;
+//マップ上からレイヤーIDを指定してフィーチャレイヤーを取得
 var layer = map.getLayer(layerStr); 
-//フィーチャレイヤに対してクエリ
+//フィーチャレイヤーに対してクエリ
 layer.queryFeatures(query).then(function(featureSet){
    var resultGraphics = featureSet.features;
    for (var i=0; i<resultGraphics.length; i++) {
