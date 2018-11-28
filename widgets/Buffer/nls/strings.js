@@ -1,3 +1,6 @@
-define({root: {_widgetLabel: "Buffer"},
-  "ja": true
+define({
+  root: ({
+    _widgetLabel: "Buffer"
+  }),
+  "ja": 1
 });

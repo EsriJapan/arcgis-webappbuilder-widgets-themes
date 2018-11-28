@@ -1,12 +1,16 @@
-﻿<div style="width:100%;height:100%;">
-    <table>
-      <tr>
-          <td>半径を入力（${config.measurement.UnitLabel}）</td>
-          <td><input class="jimu-input" data-dojo-attach-point="inputNode" value="1000"></input></td>
-      </tr>
-      <tr>
-          <td>検索レイヤーを選択</td>
-          <td><div id="selectlayer"></div></td>
-      </tr>
-    </table>
+﻿<div>
+  <table>
+    <tr>
+      <td>半径を入力（${config.measurement.UnitLabel}）</td>
+      <td>
+        <input class="jimu-input" data-dojo-attach-point="inputNode" value="1000"></input>
+      </td>
+    </tr>
+    <tr>
+      <td>検索レイヤーを選択</td>
+      <td>
+        <div data-dojo-attach-point="layerSelectNode"></div>
+      </td>
+    </tr>
+  </table>
 </div>

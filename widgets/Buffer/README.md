@@ -2,7 +2,7 @@
 
 バッファー検索を行うサンプルです。
 
-「[Web AppBuilder for ArcGIS (Developer Edition) カスタム ウィジェット開発ガイド](http://www.esrij.com/products/web-appbuilder-for-arcgis-dev/documents/)」で作成するウィジェットです。
+「[Web AppBuilder for ArcGIS (Developer Edition) カスタム ウィジェット開発ガイド](https://www.esrij.com/products/web-appbuilder-for-arcgis-dev/documents/)」で作成するウィジェットです。
 
 ![Buffer](images/image.png)
 
@@ -14,7 +14,7 @@
 
 ## 動作環境
 
-* Web AppBuilder 1.3
+* Web AppBuilder for ArcGIS (Developer Edition) バージョン 2.10
 
 ## ライセンス
 Copyright 2015 Esri Japan Corporation.
