@@ -1,0 +1,33 @@
+<div>
+	<div class="screenshot-input">
+		<div class="screenshot-input__item">
+			<label>${nls.selectFormatLabel}
+				<select data-dojo-attach-point="selectNode" data-dojo-attach-event="onchange:_onFormatChange">
+					<option value="jpg">${nls.jpg}</option>
+					<option value="png">${nls.png}</option>
+				</select>
+			</label>
+		</div>
+		<div class="screenshot-input__item">
+			<label>${nls.selectQualityLabel}
+				<input type="number" min="0" max="100" value="98" data-dojo-attach-point="numberNode">
+			</label>
+		</div>
+		<div class="screenshot-input__item">
+			<div class="jimu-btn" data-dojo-attach-point="selectAreaButtonNode" data-dojo-attach-event="onclick:_onSelectArea">${nls.selectAreaButton}</div>
+		</div>
+	</div>
+	<div class="screenshot-output screenshot-hide" data-dojo-attach-point="outputNode">
+		<div class="screenshot-output__item screenshot-output__image-container">
+			<img class="js-screenshot-image" data-dojo-attach-point="imageNode"/>
+		</div>
+		<div class="screenshot-output__item">
+			<label>${nls.textLabel}
+				<input type="text" placeholder="${nls.textPlaceholder}" data-dojo-attach-point="imageTextInput">
+			</label>
+		</div>
+		<div class="screenshot-output__item">
+			<div class="jimu-btn" data-dojo-attach-event="onclick:_onDownload">${nls.downloadButton}</div>
+		</div>
+	</div>
+</div>

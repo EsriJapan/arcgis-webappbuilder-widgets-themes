@@ -1,0 +1,53 @@
+.custom-widget-screenshot3d__screenshot-cursor {
+  cursor: crosshair;
+}
+
+.custom-widget-screenshot3d__mask {
+  position: absolute;
+  background: rgba(255, 51, 0, 0.1);
+  border: 2px dashed rgb(255, 51, 0);
+  cursor: crosshair;
+}
+
+.custom-widget-screenshot3d__mask_hide {
+  display: none;
+}
+
+.custom-widget-screenshot3d .screenshot-input {
+  margin-bottom: 20px;
+}
+
+.custom-widget-screenshot3d .screenshot-input__item,
+.custom-widget-screenshot3d .screenshot-output__item {
+  margin: 5px 0;
+}
+
+.custom-widget-screenshot3d .screenshot-input__item input[type=number] {
+  padding: 3px 2px;
+  border: 1px solid #ddd;
+  width: 50px;
+}
+
+.custom-widget-screenshot3d .screenshot-output__item input[type=text] {
+  padding: 3px 2px;
+  border: 1px solid #ddd;
+}
+
+.custom-widget-screenshot3d .screenshot-output__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-widget-screenshot3d .screenshot-output__image-container img {
+  padding: 10px 0;
+}
+
+.custom-widget-screenshot3d .jimu-btn.active {
+  background-color: #94a1b3;
+  color: #ffffff;
+}
+
+.custom-widget-screenshot3d .screenshot-hide {
+  display: none;
+}
